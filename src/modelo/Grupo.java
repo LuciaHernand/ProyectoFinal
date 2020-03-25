@@ -1,5 +1,5 @@
 package modelo;
 
-public class Grupo {
-	//hola
+public class Grupo extends Artista{
+
 }
