@@ -17,6 +17,11 @@ public class Tema {
 		this.nombreTema = nombreTema;
 		this.autorTema = autorTema;
 	}
+	public Tema(String nombreTema, String autorTema) {
+		super();
+		this.nombreTema = nombreTema;
+		this.autorTema = autorTema;
+	}
 	public int getIdTema() {
 		return idTema;
 	}
@@ -37,7 +42,7 @@ public class Tema {
 	}
 	@Override
 	public String toString() {
-		return "Tema [idTema=" + idTema + ", nombreTema=" + nombreTema + ", autorTema=" + autorTema + "]";
+		return "Tema [idTema=" + idTema + ", nombreTema=" + nombreTema + ", autorTema=" + autorTema + "]\n";
 	}
 	
 	

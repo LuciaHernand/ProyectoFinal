@@ -1,0 +1,15 @@
+			LISTADO DE LOS 10 PRIMEROS TEMAS
+-------------------------------------------
+
+
+
+1 : Dance Monkey
+2 : Tennessee Whiskey
+3 : Bohemian Rhapsody
+4 : Sweet Caroline
+5 : Someone You Loved
+6 : Don't Stop Believing
+7 : Take Me Home, Country Roads
+8 : Memories
+9 : J'irai où tu iras
+10 : Dancing Queen

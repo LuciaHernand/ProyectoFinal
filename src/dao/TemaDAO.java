@@ -35,15 +35,22 @@ public class TemaDAO {
 		String sqlInsert="DELETE FROM temas WHERE id_tema="+id;
 		enlace.insertar(sqlInsert);
 	}
+	public static void actualizarId() throws SQLException{
+		EnlaceJDBC enlace=new EnlaceJDBC();
+		
+		String sqlUpdate="UPDATE  temas SET id_tema=id_tema-60549 WHERE id_tema>60549";
+		enlace.insertar(sqlUpdate);
+		System.out.println("Se han actualizado los id correctamente");
+	}
+	
 	public static void insertarTemasFichero(List<Tema> listaTemas) throws SQLException{
 		EnlaceJDBC enlace=new EnlaceJDBC();
 		for(Tema t: listaTemas) {
-		String sqlInsert="INSERT INTO temas (nombre_tema) VALUES ('"+t.getNombreTema()+
-		"')";
+		String sqlInsert="INSERT INTO temas  VALUES ('"+t.getIdTema()+"','"+t.getNombreTema()+"','"+t.getAutorTema()+"')";
 		enlace.insertar(sqlInsert);}
 	}
 	public static List<Tema> listadoTemas(){
-	List<Tema> listaTemas=new ArrayList<Tema>();
+	List<Tema> listaTemas=new ArrayList<>();
 	EnlaceJDBC enlace;
 	String sqlQuery="SELECT id_tema,nombre_tema,autor_tema FROM temas";
 	ResultSet rs=null;
@@ -59,7 +66,7 @@ public class TemaDAO {
 			
 		}
 	} catch (SQLException e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	}
 

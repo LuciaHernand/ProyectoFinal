@@ -1,6 +1,7 @@
 package modelo;
 
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 public class Interpretacion {
@@ -9,6 +10,12 @@ public class Interpretacion {
 	 private Tema temaInterpretacion;
 	 private Estilo  estiloInterpretacion;
 	 private List<Interprete> listaInterprete;
+	 
+	 
+	 public Interpretacion() {
+		 
+		 
+	 }
 	public Interpretacion(int idInterpretacion, Calendar fechaInterpretacion, Tema temaInterpretacion,
 			Estilo estiloInterpretacion, List<Interprete> listaInterprete) {
 		super();
@@ -48,11 +55,20 @@ public class Interpretacion {
 	public void setListaInterprete(List<Interprete> listaInterprete) {
 		this.listaInterprete = listaInterprete;
 	}
+	public String obtenerDate() {
+		return  this.fechaInterpretacion.get(Calendar.YEAR)+"-"+ (this.fechaInterpretacion.get(Calendar.MONTH)+1)+"-" +this.fechaInterpretacion.get(Calendar.DAY_OF_MONTH);
+	}
+	public void grabarCalendar(String s) {
+		String[] dma=s.split("-");
+		this.fechaInterpretacion= new GregorianCalendar(Integer.parseInt(dma[0]),Integer.parseInt(dma[1]),Integer.parseInt(dma[2]));
+		
+	}
+	
 	@Override
 	public String toString() {
-		return "Interpretacion [idInterpretacion=" + idInterpretacion + ", fechaInterpretacion=" + fechaInterpretacion
-				+ ", temaInterpretacion=" + temaInterpretacion + ", estiloInterpretacion=" + estiloInterpretacion
-				+ ", listaInterprete=" + listaInterprete + "]";
+		return "Interpretacion [idInterpretacion=" + idInterpretacion + ",\n\t fechaInterpretacion=" + fechaInterpretacion.getTime()
+				+ ",\n\t temaInterpretacion=" + temaInterpretacion + ",\n\t estiloInterpretacion=" + estiloInterpretacion
+				+ ",\n\t listaInterprete=" + listaInterprete + "]";
 	}
 	 
 	
