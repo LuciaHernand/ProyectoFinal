@@ -1,11 +1,10 @@
-package Control;
+package dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import dao.EnlaceJDBC;
 import modelo.Estilo;
 import modelo.Interpretacion;
 import modelo.Interprete;

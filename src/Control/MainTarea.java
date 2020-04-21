@@ -160,7 +160,7 @@ public static   void generarListaTemasEstiloInterpretes(){
 			//TemaDAO.listadoTemas();
 		//Escritura.mostrarTemas(TemaDAO.listadoTemas());
 			//List<Tema> listaTemas=TemaDAO.listadoTemas();
-			//ManejoFichero.top10(listaTemas);
+			ManejoFichero.top10(listaTemas);
 			
 			//TemaDAO.actualizarId();
 			//----------------ESTILOS:INSERCION,BORRADO DE FICHERO,LISTADO----------
@@ -211,7 +211,7 @@ public static   void generarListaTemasEstiloInterpretes(){
 		    //  System.out.println(varInterpretacion.toString());
 			//	InterpretacionDAO.insertarUnaInterpretacionAN(varInterpretacion);
 			//  Escritura.mostrarInterpretacion(InterpretacionDAO.listadoInterpretaciones());
-				InterpretacionDAO.modificarIdInterpretacion();
+				//InterpretacionDAO.modificarIdInterpretacion();
 		} catch (Exception e) {
 		
 			e.printStackTrace();
